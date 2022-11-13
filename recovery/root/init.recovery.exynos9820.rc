@@ -9,3 +9,12 @@ on late-init
 on fs
     wait /dev/block/platform/13d60000.ufs
     symlink /dev/block/platform/13d60000.ufs /dev/block/bootdevice
+    start hwservicemanager
+
+service hwservicemanager /system/bin/hwservicemanager
+    user root
+    group root
+    disabled
+    onrestart setprop hwservicemanager.ready false
+    seclabel u:r:recovery:s0
+
