@@ -43,6 +43,7 @@
 /up_param       emmc    /dev/block/by-name/up_param             flags=display="Param";backup=1;flashimg=1;
 /vbmeta_system  emmc    /dev/block/by-name/vbmeta               flags=display="Vbmeta System";backup=1;flashimg=1;
 /vbmeta_samsung emmc    /dev/block/by-name/vbmeta_samsung       flags=display="Vbmeta Samsung";backup=1;flashimg=1;
+/omr		ext4	/dev/block/by-name/omr			flags=display="Logs (OMR)";backup=1
 
 # External Stuff
 /external_sd    vfat    /dev/block/mmcblk0p1 /dev/block/mmcblk0 flags=display="External SDCard";storage;wipeingui;removable;
