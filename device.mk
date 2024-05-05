@@ -5,16 +5,27 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-#Dynamic Partition Flag
-PRODUCT_USE_DYNAMIC_PARTITIONS := true
+# Enable project quotas and casefolding for emulated storage without sdcardfs
+$(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
-# Lpdump
-TW_EXCLUDE_LPDUMP := true
+# VNDK
+PRODUCT_TARGET_VNDK_VERSION := 31
+
+# API
+PRODUCT_SHIPPING_API_LEVEL := 28
+
+# No dynamic partitions
+PRODUCT_USE_DYNAMIC_PARTITIONS := false
 
 # fastbootd
 PRODUCT_PACKAGES += \
-    fastbootd \
-    android.hardware.fastboot@1.0-impl-mock
+    android.hardware.fastboot@1.0-impl-mock \
+    android.hardware.fastboot@1.0-impl-mock.recovery \
+    fastbootd
 
-# Python prebuilts
-TW_EXCLUDE_PYTHON := true
+PRODUCT_PRODUCT_PROPERTIES += \
+	ro.fastbootd.available=true
+
+# Screen
+TARGET_SCREEN_WIDTH := 1440
+TARGET_SCREEN_HEIGHT := 3040
