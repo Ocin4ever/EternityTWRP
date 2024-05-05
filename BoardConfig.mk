@@ -21,25 +21,40 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a55
 
 # Bootloader
-BOARD_VENDOR := samsung
-TARGET_SOC := exynos9611
-TARGET_BOOTLOADER_BOARD_NAME := exynos9611
-
-# Kernel
-BOARD_KERNEL_BASE := 0x10000000
-BOARD_KERNEL_PAGESIZE := 2048
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image
-BOARD_KERNEL_CMDLINE := androidboot.hardware=exynos9611
-BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --header_version 2 --board SRPSG30B004RU
-BOARD_INCLUDE_RECOVERY_DTBO := true
-BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/recovery_dtbo
-BOARD_PREBUILT_DTBIMAGE_DIR := $(DEVICE_PATH)/prebuilt/dtb
-BOARD_INCLUDE_DTB_IN_BOOTIMG := true
-BOARD_KERNEL_IMAGE_NAME := Image
+TARGET_BOOTLOADER_BOARD_NAME := universal9820
+TARGET_NO_BOOTLOADER := true
 
 # Platform
-TARGET_BOARD_PLATFORM := exynos9611
-TARGET_BOARD_PLATFORM_GPU := mali-g72
+TARGET_BOARD_PLATFORM := $(PRODUCT_PLATFORM)
+
+# Kernel
+TARGET_KERNEL_ARCH := $(TARGET_ARCH)
+BOARD_KERNEL_IMAGE_NAME := Image
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image
+BOARD_INCLUDE_RECOVERY_DTBO := true
+BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/recovery_dtbo
+
+BOARD_KERNEL_CMDLINE := \
+    androidboot.hardware=exynos9820 \
+    androidboot.selinux=permissive
+
+BOARD_MKBOOTIMG_ARGS := \
+    --base 0x10000000 \
+    --kernel_offset 0x00008000 \
+    --pagesize 2048 \
+    --ramdisk_offset 0x01000000 \
+    --os_version 14.0.0 \
+    --tags_offset 0x00000100 \
+    --header_version 1
+
+BOARD_ROOT_EXTRA_FOLDERS := \
+    carrier \
+    data_mirror \
+    efs \
+    keydata \
+    keyrefuge \
+    omr \
+    spu
 
 # Filesystem
 BOARD_HAS_LARGE_FILESYSTEM := true
