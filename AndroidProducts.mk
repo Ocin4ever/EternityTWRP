@@ -14,6 +14,6 @@
 # limitations under the License.
 #
 
-PRODUCT_MAKEFILES := $(LOCAL_DIR)/twrp_a51.mk
+PRODUCT_MAKEFILES := $(LOCAL_DIR)/twrp_beyond2lte.mk
 
-COMMON_LUNCH_CHOICES := twrp_a51-eng
+COMMON_LUNCH_CHOICES := twrp_beyond2lte-eng

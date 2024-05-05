@@ -10,7 +10,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-DEVICE_PATH := device/samsung/a51
+DEVICE_PATH := device/samsung/beyond2lte
 
 # Architecture
 TARGET_ARCH := arm64
