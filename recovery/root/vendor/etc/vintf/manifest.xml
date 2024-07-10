@@ -1,0 +1,12 @@
+<!--
+    Input:
+        manifest.xml
+-->
+<manifest version="2.0" type="device" target-level="6">
+    <sepolicy>
+        <version>31.0</version>
+    </sepolicy>
+    <kernel target-level="6"/>
+</manifest>
+
+
