@@ -5,7 +5,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-ifneq ($(filter beyond2lte,$(TARGET_DEVICE)),)
+ifneq ($(filter d2s,$(TARGET_DEVICE)),)
 
 LOCAL_PATH := $(call my-dir)
 

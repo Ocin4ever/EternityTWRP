@@ -6,7 +6,7 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/twrp_beyond2lte.mk
+    $(LOCAL_DIR)/twrp_d2s.mk
 
 COMMON_LUNCH_CHOICES := \
-    twrp_beyond2lte-eng
+    twrp_d2s-eng

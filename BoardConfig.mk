@@ -19,7 +19,7 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a55
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := universal9820
+TARGET_BOOTLOADER_BOARD_NAME := universal9825
 TARGET_NO_BOOTLOADER := true
 
 # Platform
@@ -33,7 +33,7 @@ BOARD_INCLUDE_RECOVERY_DTBO := true
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/recovery_dtbo
 
 BOARD_KERNEL_CMDLINE := \
-    androidboot.hardware=exynos9820 \
+    androidboot.hardware=exynos9825 \
     androidboot.selinux=permissive
 
 BOARD_MKBOOTIMG_ARGS := \
@@ -53,7 +53,7 @@ BOARD_DTBIMG_PARTITION_SIZE := 8388608
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 67633152
 
 TARGET_USERIMAGES_USE_EXT4 := true
-TARGET_USERIMAGES_USE_F2FS := false
+TARGET_USERIMAGES_USE_F2FS := true
 
 BOARD_ROOT_EXTRA_FOLDERS := \
     efs \
