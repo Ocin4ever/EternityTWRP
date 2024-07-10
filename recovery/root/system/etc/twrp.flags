@@ -4,11 +4,17 @@
 /system_root    ext4 /dev/block/bootdevice/by-name/system  flags=backup=1;wipeingui;display="System"
 /vendor         ext4 /dev/block/bootdevice/by-name/vendor  flags=backup=1;wipeingui;display="Vendor"
 /product        ext4 /dev/block/bootdevice/by-name/product  flags=backup=1;wipeingui;display="Product"
+/odm        	ext4 /dev/block/bootdevice/by-name/odm  flags=backup=1;wipeingui;display="ODM"
+/prism	        ext4 /dev/block/bootdevice/by-name/prism  flags=backup=1;wipeingui;display="Prism"
+/optics	        ext4 /dev/block/bootdevice/by-name/optics  flags=backup=1;wipeingui;display="Optics"
 
 # Main system partitions (Images)
 /system_image   emmc /dev/block/bootdevice/by-name/system  flags=backup=1;flashimg;display="System Image"
 /vendor_image   emmc /dev/block/bootdevice/by-name/vendor  flags=backup=1;flashimg;display="Vendor Image"
 /product_image  emmc /dev/block/bootdevice/by-name/product  flags=backup=1;flashimg;display="Product Image"
+/odm_image  emmc /dev/block/bootdevice/by-name/odm  flags=backup=1;flashimg;display="ODM Image"
+/prism_image  emmc /dev/block/bootdevice/by-name/prism  flags=backup=1;flashimg;display="Prism Image"
+/optics_image  emmc /dev/block/bootdevice/by-name/optics  flags=backup=1;flashimg;display="Optics Image"
 
 # Misc partitions
 /boot		    emmc		/dev/block/bootdevice/by-name/boot
