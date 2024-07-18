@@ -9,7 +9,7 @@ This device tree was tested and is fully compatible with [minimal-manifest-twrp]
 2. In the root folder of the fetched repo, clone the device tree:
 
 ```bash
-git clone https://github.com/ExtremeXT/android_device_samsung_d2s.git -b android-11 device/samsung/d2s
+git clone https://github.com/Ocin4ever/EternityTWRP.git -b d2s device/samsung/d2s
 ```
 
 3. To build:
