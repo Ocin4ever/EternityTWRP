@@ -1,4 +1,4 @@
-# TWRP Device Tree for Samsung Galaxy Note 10+ (d2s)
+# TWRP Device Tree for Samsung Galaxy Note 10+ 5g (d2x)
 
 ## How to build
 
@@ -9,14 +9,14 @@ This device tree was tested and is fully compatible with [minimal-manifest-twrp]
 2. In the root folder of the fetched repo, clone the device tree:
 
 ```bash
-git clone https://github.com/ExtremeXT/android_device_samsung_d2s.git -b android-11 device/samsung/d2s
+git clone https://github.com/Ocin4ever/EternityTWRP.git -b d2x device/samsung/d2x
 ```
 
 3. To build:
 
 ```bash
 . build/envsetup.sh
-lunch twrp_d2s-eng
+lunch twrp_d2x-eng
 mka recoveryimage
 ```
 
